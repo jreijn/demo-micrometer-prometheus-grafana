@@ -9,14 +9,14 @@ services:
     ports:
     - '8080:8080'
   prometheus:
-    image: prom/prometheus:v2.4.3
+    image: prom/prometheus:v2.24.1
     container_name: 'prometheus'
     volumes:
     - ./monitoring/prometheus/:/etc/prometheus/
     ports:
     - '9090:9090'
   grafana:
-    image: grafana/grafana:5.2.4
+    image: grafana/grafana:5.4.3
     container_name: 'grafana'
     ports:
     - '3000:3000'
